@@ -21,7 +21,7 @@ async function main() {
 
   await client.invoke(
     new Api.account.UpdateProfile({
-      firstName: `${baseName} ${time}`,
+      firstName: time.replace(/[0-9]/g, d => "𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡"[Number(d)]),
     })
   );
 
